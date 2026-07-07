@@ -35,9 +35,9 @@ public class Aula01 {
             System.out.println("teste");
         }
 
-        if (idade = 18){
-            System.out.println("teste");
-        }
+//        if (idade = 18){
+//            System.out.println("teste");
+//        }
 
         //
         String status;
