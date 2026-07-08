@@ -45,14 +45,23 @@ public class Calculadora {
                     resultado = numero1 / numero2;
                     System.out.println("Resultado = " + resultado);
                     break;
+                default:
+                    System.out.println("Entrada inválida");
             }
 
-            entrada.nextLine(); // usei isso para consumir um nextline, não sei se está correto
+            entrada.nextLine();
 
-            System.out.print("Deseja continuar? Sim/Não: ");
-            String continuar = entrada.nextLine();
-            if (continuar.equalsIgnoreCase("Não")) {
-                continua = false;
+            while (true){
+                System.out.print("Deseja continuar? Sim/Não: ");
+                String continuar = entrada.nextLine();
+
+                if (continuar.equalsIgnoreCase("Não") || continuar.equalsIgnoreCase("NAO") || continuar.equalsIgnoreCase("N") ) {
+                    continua = false;
+                } else if (!continuar.equalsIgnoreCase("Sim") && !continuar.equalsIgnoreCase("S")) {
+                    System.out.println("Entrada inválida");
+                    continue;
+                }
+                break;
             }
         }
 
