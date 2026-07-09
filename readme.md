@@ -34,16 +34,27 @@ O repositório está organizado por tópico/módulo de estudo, refletindo a orde
 ## 🛣️ Roteiro de conteúdo
 
 ✅ Fundamentos de Java (sintaxe, tipos, operadores)
+
 ✅ Estruturas condicionais e de repetição
+
 ✅ Arrays e manipulação de Strings
+
 ✅ Lógica matemática aplicada à programação (complexidade, sistemas numéricos)
+
 ⬜ Orientação a Objetos
+
 ⬜ Tratamento de exceções e Collections
+
 ⬜ Estrutura de dados e algoritmos
+
 ⬜ Banco de dados (SQL, JDBC)
+
 ⬜ Git e GitHub avançado
+
 ⬜ APIs REST com Spring Boot
+
 ⬜ Testes unitários e Clean Code
+
 ⬜ Projeto final integrando todo o conteúdo
 
 ## 🛠️ Tecnologias e ferramentas
