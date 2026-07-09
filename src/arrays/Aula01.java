@@ -44,7 +44,7 @@ public class Aula01 {
 
         // 6
 
-     for (int i = array.length - 1; i > 0; i--){
+     for (int i = array.length - 1; i >= 0; i--){
          System.out.println(array[i]);
      }
 
