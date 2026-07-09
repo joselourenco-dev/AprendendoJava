@@ -21,8 +21,8 @@ public class Aula01 {
 
         System.out.println("\n ============================");
         //4
-        int maior = 0;
-        for (int i = 0; i < array.length; i++){
+        int maior = array[0];
+        for (int i = 1; i < array.length; i++){
             if (array[i] > maior){
                 maior = array[i];
             }
@@ -44,15 +44,9 @@ public class Aula01 {
 
         // 6
 
-        int cont = array.length;
-        while (true){
-            System.out.println(array[cont - 1]);
-            cont--;
-            if (cont == 0){
-                break;
-            }
-        }
-
+     for (int i = array.length - 1; i > 0; i--){
+         System.out.println(array[i]);
+     }
 
     }
 }
