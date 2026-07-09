@@ -1,6 +1,6 @@
-package arrays;
+package lacoderepeticao;
 
-public class Aula01 {
+public class Aula02 {
     public static void main(String[] args){
         //1
         int[] array = {4, 5, 3, 65, 96};
