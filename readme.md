@@ -16,20 +16,20 @@ Documentar, de forma transparente, minha evolução como desenvolvedor — do ze
 
 ## 🗂️ Estrutura do repositório
 
-O repositório está organizado por tópico/módulo de estudo, refletindo a ordem cronológica de aprendizado:
+O projeto segue a estrutura padrão de um projeto Java (Maven/IntelliJ), com o código-fonte organizado dentro de `src/`, por tópico/módulo de estudo, refletindo a ordem cronológica de aprendizado:
 
 ```
-├── fundamentos/          # Sintaxe, tipos primitivos, operadores
-├── condicional/          # Estruturas de decisão (if/else, switch)
-├── lacoderepeticao/      # Laços de repetição (while, for) e arrays
-├── poo/                  # Orientação a Objetos (classes, herança, interfaces...)
-├── estrutura-de-dados/   # Coleções, pilhas, filas, árvores
-├── banco-de-dados/       # SQL, JDBC, persistência
-├── api-rest/             # Spring Boot, APIs REST, JPA
-└── projetos/             # Projetos práticos completos (calculadora, sistemas, APIs)
+AprendendoJava/
+└── src/
+    ├── variaveis/            # Sintaxe, tipos primitivos, operadores
+    ├── condicional/          # Estruturas de decisão (if/else, switch)
+    ├── lacoderepeticao/      # Laços de repetição (while, for) e arrays
+    ├── orientacaoObjetos/   # Orientação a Objetos (classes, objetos, encapsulamento...)
+    │   └── exercicios/       # Exercícios práticos do módulo (ex: Pessoa, Main)
+    └── projetos/             # Projetos práticos completos (ex: Calculadora)
 ```
 
-*(estrutura em expansão — novas pastas são adicionadas conforme o estudo avança)*
+*(estrutura em expansão — novas pastas são adicionadas conforme o estudo avança, incluindo os módulos futuros de estrutura de dados, banco de dados e APIs REST)*
 
 ## 🛣️ Roteiro de conteúdo
 
