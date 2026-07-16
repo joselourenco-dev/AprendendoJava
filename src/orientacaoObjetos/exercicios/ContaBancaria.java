@@ -1,4 +1,4 @@
-package orientacaoObejetos.exercicios;
+package orientacaoObjetos.exercicios;
 
 public class ContaBancaria {
     private String titular;

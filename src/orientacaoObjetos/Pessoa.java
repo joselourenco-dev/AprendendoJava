@@ -1,4 +1,4 @@
-package orientacaoObejetos;
+package orientacaoObjetos;
 
 public class Pessoa {
     String nome;
