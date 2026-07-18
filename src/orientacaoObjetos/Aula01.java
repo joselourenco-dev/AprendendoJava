@@ -1,6 +1,6 @@
 package orientacaoObjetos;
 
-public class Main {
+public class Aula01 {
     public static void main(String[] args){
         Pessoa pessoa1 = new Pessoa();
         pessoa1.nome = "Alana";
