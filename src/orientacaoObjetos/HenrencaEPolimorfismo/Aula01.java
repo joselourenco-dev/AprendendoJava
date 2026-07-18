@@ -1,6 +1,6 @@
-package orientacaoObjetos;
+package orientacaoObjetos.HenrencaEPolimorfismo;
 
-public class HenrencaEPolimorfismo {
+public class Aula01 {
     public class Cachorro{
         String nome;
         int idade;
