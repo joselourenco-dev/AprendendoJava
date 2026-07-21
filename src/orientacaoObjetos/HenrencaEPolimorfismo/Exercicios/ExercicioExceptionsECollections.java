@@ -16,12 +16,12 @@ public class ExercicioExceptionsECollections {
         System.out.println(tarefas.size());
 
         //2
-         HashMap<String, Integer> Pessoa = new HashMap<>();
-         Pessoa.put("Alana", 15);
-         Pessoa.put("Ariel", 17);
-         Pessoa.put("Fabula", 25);
+         HashMap<String, Integer> pessoas = new HashMap<>();
+         pessoas.put("Alana", 15);
+         pessoas.put("Ariel", 17);
+         pessoas.put("Fabula", 25);
 
-         int idade = Pessoa.get("Fabula");
+         int idade = pessoas.get("Fabula");
 
         System.out.println("Idade: " + idade);
 
