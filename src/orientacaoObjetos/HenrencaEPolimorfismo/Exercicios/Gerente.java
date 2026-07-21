@@ -1,10 +1,14 @@
 package orientacaoObjetos.HenrencaEPolimorfismo.Exercicios;
 
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionario implements Pagavel {
 
     @Override
     public void exibirDados(){
-        super.exibirDados();
-        System.out.println("Metas do mês...");
+        System.out.println("É um gerente");
+    }
+
+    @Override
+    public void calcularPagamento() {
+        System.out.println("Pagamento do gerente calculado com bônus de meta");
     }
 }

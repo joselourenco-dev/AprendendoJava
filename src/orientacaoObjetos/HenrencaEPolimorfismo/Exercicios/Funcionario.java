@@ -1,9 +1,9 @@
 package orientacaoObjetos.HenrencaEPolimorfismo.Exercicios;
 
-public class Funcionario {
+public abstract class Funcionario {
     String nome;
     double salario;
 
-       public void exibirDados(){}
+       abstract void exibirDados();
 
 }
