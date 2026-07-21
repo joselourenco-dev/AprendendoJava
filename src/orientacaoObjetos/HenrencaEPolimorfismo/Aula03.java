@@ -15,7 +15,7 @@ public class Aula03 {
         String produtoBuscado = "Micro-ondas";
 
         try {
-            double preco = precos.get(precos);
+            double preco = precos.get(produtoBuscado);
             System.out.println("Preço: " + preco);
         } catch (NullPointerException e) {
             System.out.println("Produto não encontrado");
