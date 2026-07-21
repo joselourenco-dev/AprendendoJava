@@ -1,4 +1,5 @@
 package orientacaoObjetos.HenrencaEPolimorfismo.Exercicios;
 
-public interface Pagavel {
+public interface Pagavel  {
+    void calcularPagamento();
 }
