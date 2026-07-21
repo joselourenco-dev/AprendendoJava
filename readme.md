@@ -14,6 +14,7 @@ Documentar, de forma transparente, minha evolução como desenvolvedor — do ze
 - **Aprendizado por projetos**: os conceitos são consolidados através de projetos práticos de complexidade crescente, não apenas exercícios isolados.
 - **Evolução contínua e documentada**: o repositório é atualizado constantemente conforme novos tópicos são estudados, incluindo retrabalho de código antigo à luz de conceitos aprendidos depois.
 
+
 ## 🗂️ Estrutura do repositório
 
 O projeto segue a estrutura padrão de um projeto Java (Maven/IntelliJ), com o código-fonte organizado dentro de `src/`, por tópico/módulo de estudo, refletindo a ordem cronológica de aprendizado:
@@ -41,9 +42,9 @@ AprendendoJava/
 
 ✅ Lógica matemática aplicada à programação (complexidade, sistemas numéricos)
 
-⬜ Orientação a Objetos
+🔶 Orientação a Objetos — classes, herança, polimorfismo, interfaces e classes abstratas concluídos; falta o projeto prático (Sistema Bancário)
 
-⬜ Tratamento de exceções e Collections
+🔶 Tratamento de exceções e Collections — try/catch/finally, ArrayList e HashMap concluídos; exercícios complementares em andamento
 
 ⬜ Estrutura de dados e algoritmos
 
