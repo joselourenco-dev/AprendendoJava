@@ -1,4 +1,9 @@
 package projetos.sistemabancario;
 
-public class ListarContas {
+import java.util.ArrayList;
+
+public class ListarContaBancaria {
+    public void listarContas(){
+
+    }
 }
