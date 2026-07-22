@@ -5,33 +5,37 @@ public class ContaBancaria {
     private double saldo;
     private int numeroConta;
 
-    ContaBancaria(String titular, double saldo, int numeroConta){
+    ContaBancaria(String titular, double saldo, int numeroConta) {
         this.titular = titular;
         this.saldo = saldo;
         this.numeroConta = numeroConta;
     }
 
-    double depositar(double valor){
-        if(valor <= 0){
+    public void depositar(double valor) {
+        if (valor <= 0) {
             System.out.println("Valor inválido");
-            return saldo;
+            return;
         }
         saldo = saldo + valor;
-        return saldo;
+
     }
 
-    double sacar(double valor) throws SaldoInsuficienteException {
-        if (saldo < valor){
+    public  void sacar(double valor) throws SaldoInsuficienteException {
+        if (saldo < valor) {
             throw new SaldoInsuficienteException("Saldo insuficiente para saque de " + valor);
         }
-        return saldo =  saldo - valor;
+        saldo -= valor;
     }
 
+    public String getTitular() {
+        return titular;
+    }
 
-    public double getSaldo(){
+    public double getSaldo() {
         return saldo;
     }
 
-    public String getTitular(){return  titular;}
-
+    public int getNumeroConta() {
+        return numeroConta;
+    }
 }
