@@ -4,17 +4,11 @@ import projetos.sistemabancario.src.banco.Banco;
 import projetos.sistemabancario.src.model.ContaBancaria;
 import projetos.sistemabancario.src.util.Entrada;
 
-import java.util.Scanner;
-
 public class AdicionarConta {
-    Entrada entrada;
-    double saldo = 0;
-    int numeroConta = 0;
-    boolean novaConta = true;
-    ContaBancaria contaBancaria;
-
-    public void executar(Banco banco, Entrada  entrada){
-      cd
+      public void executar(Banco banco, Entrada  entrada){
+        System.out.print("Digite o nome do titular: ");
+        String titular = entrada.lerTexto();
+        banco.adicionarConta(titular);
     }
 }
 
