@@ -1,7 +1,6 @@
 package projetos.sistemabancario.src.operacoes;
 
 import projetos.sistemabancario.src.banco.Banco;
-import projetos.sistemabancario.src.model.ContaBancaria;
 import projetos.sistemabancario.src.util.Entrada;
 
 public class AdicionarConta {
