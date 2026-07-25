@@ -6,28 +6,41 @@ import java.util.ArrayList;
 
 public class Banco {
     private ArrayList<ContaBancaria> contas = new ArrayList<>();
+    private double saldo = 0;
+    private int numeroConta = 0;
 
-    public Banco(){
+    public void adicionarConta(String titular) {
+
+      if (contas.size() == 0){
+          numeroConta = 1;
+      }else {
+          for (int i = 0; i < contas.size(); i++) {
+              numeroConta = contas.get(i).getNumeroConta() + 1;
+          }
+      }
+        ContaBancaria conta = new ContaBancaria(titular, numeroConta, saldo);
+
+        contas.add(conta);
+    }
+
+    public void removerConta(int numeroConta) {
+        for (ContaBancaria contaBancaria : contas) {
+            if (contaBancaria.getNumeroConta() == numeroConta) {
+                contas.remove(contaBancaria);
+            }
+        }
 
     }
 
-    public void adicionarConta(ContaBancaria conta) {
-    }
-
-    public void removerConta(int numeroConta){
-        // remove da lista, buscando pelo número — precisa percorrer e comparar
+    public void buscarConta(int numeroConta) {
 
     }
 
-    public  ContaBancaria buscarConta(int numeroConta){
-        // percorre a lista procurando o número — retorna a conta ou null se não encontrar
+    public void listarContas() {
+     for (ContaBancaria contaBancaria: contas){
+         System.out.println("Conta numero: " + contaBancaria.getNumeroConta());
+     }
 
-        return numeroConta;
-    }
-
-    public ArrayList<ContaBancaria> listarContas(){
-        // retorna a lista
-        return listarContas();
     }
 
 }
