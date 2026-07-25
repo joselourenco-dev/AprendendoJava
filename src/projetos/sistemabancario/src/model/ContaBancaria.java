@@ -7,23 +7,24 @@ public class ContaBancaria {
     int numeroConta;
     double saldo;
 
-    public ContaBancaria(String titular, int numeroConta, double saldo){
+    public ContaBancaria(String titular, int numeroConta, double saldo) {
         this.titular = titular;
         this.numeroConta = numeroConta;
         this.saldo = saldo;
     }
 
-    public void depositar(double valor){
-        if (valor <= 0){
+    public void depositar(double valor) {
+        if (valor <= 0) {
             System.out.println("Valor inválido");
-        }else {
+        } else {
             saldo += valor;
         }
     }
+
     public void sacar(double valor) throws SaldoInsuficienteException {
-        if (valor > saldo){
+        if (valor > saldo) {
             throw new SaldoInsuficienteException("Saldo insuficiente para saque de " + valor);
-        }else {
+        } else {
             saldo -= valor;
         }
     }
