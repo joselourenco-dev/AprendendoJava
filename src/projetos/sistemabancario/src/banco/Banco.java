@@ -44,11 +44,7 @@ public class Banco {
         return null;
     }
 
-    public void listarContas() {
-        for (ContaBancaria contaBancaria : contas) {
-            System.out.println("Conta numero: " + contaBancaria.getNumeroConta());
-        }
-
+    public ArrayList<ContaBancaria> listarContas(){
+        return new ArrayList<>(contas);
     }
-
 }
