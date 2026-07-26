@@ -7,8 +7,12 @@ public class ListarConta {
     public void executar(Banco banco){
         System.out.println("Listando contas: ");
         ArrayList<ContaBancaria> contas = banco.listarContas();
-        for(ContaBancaria contaBancaria: contas){
-            System.out.println("Conta numero: " + contaBancaria.getNumeroConta());
+        if (contas.size() == 0){
+            System.out.println("Lista de contas vazia.");
+        }else {
+            for(ContaBancaria contaBancaria: contas){
+                System.out.println("Conta numero: " + contaBancaria.getNumeroConta());
+            }
         }
     }
 }
