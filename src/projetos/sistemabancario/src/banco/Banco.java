@@ -47,4 +47,8 @@ public class Banco {
     public ArrayList<ContaBancaria> listarContas(){
         return new ArrayList<>(contas);
     }
+
+    public void Depositar(double valor){
+        System.out.println("Regra para pegar a conta e depositar"); // ainda será escrita
+    }
 }
