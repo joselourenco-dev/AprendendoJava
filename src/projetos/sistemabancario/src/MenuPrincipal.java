@@ -11,7 +11,7 @@ public class MenuPrincipal {
     private Entrada entrada;
     private Menu menu;
 
-    public MenuPrincipal(Banco banco, Entrada entrada, Menu menu){
+    public MenuPrincipal(Banco banco, Entrada entrada, Menu menu) {
         this.banco = banco;
         this.entrada = entrada;
         this.menu = menu;
@@ -43,7 +43,7 @@ public class MenuPrincipal {
                     if (contaBancaria == null) {
                         System.out.println("Conta não existe ");
                     } else {
-                      acessarConta(contaBancaria);
+                        acessarConta(contaBancaria);
                     }
                     break;
                 case 4:
@@ -60,15 +60,15 @@ public class MenuPrincipal {
         }
     }
 
-    private void acessarConta(ContaBancaria contaBancaria){
+    private void acessarConta(ContaBancaria contaBancaria) {
         boolean dentroDaConta = true;
 
-        while (dentroDaConta){
+        while (dentroDaConta) {
             menu.subMenu();
             System.out.print("Digite a opção desejada: ");
             int opcao = entrada.lerInteiro();
 
-            switch (opcao){
+            switch (opcao) {
                 case 1:
                     System.out.println("Depósito");
                     Depositar depositar = new Depositar();
