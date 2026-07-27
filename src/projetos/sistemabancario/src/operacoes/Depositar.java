@@ -1,12 +1,13 @@
 package projetos.sistemabancario.src.operacoes;
 
-import projetos.sistemabancario.src.banco.Banco;
+import projetos.sistemabancario.src.model.ContaBancaria;
 import projetos.sistemabancario.src.util.Entrada;
 
 public class Depositar {
-    public void executar(Banco banco, Entrada entrada){
-        System.out.println("Valor do depósito: ");
+    public void executar(ContaBancaria conta, Entrada entrada){
+        System.out.print("Digite o valor que deseja depositar: ");
         double valor = entrada.lerDouble();
-        banco.Depositar(valor);
+        conta.depositar(valor);
+        System.out.println("Depósito efetuado com sucesso");
     }
 }
