@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class Banco {
     private ArrayList<ContaBancaria> contas = new ArrayList<>();
 
-
     public void adicionarConta(String titular) {
         double saldo = 0;
         int numeroConta = 0;
@@ -19,7 +18,7 @@ public class Banco {
                     numeroConta = contas.get(i).getNumeroConta();
                 }
             }
-            numeroConta = numeroConta +1;
+            numeroConta = numeroConta + 1;
         }
         ContaBancaria conta = new ContaBancaria(titular, numeroConta, saldo);
 
@@ -44,11 +43,7 @@ public class Banco {
         return null;
     }
 
-    public ArrayList<ContaBancaria> listarContas(){
+    public ArrayList<ContaBancaria> listarContas() {
         return new ArrayList<>(contas);
-    }
-
-    public void Depositar(double valor){
-        System.out.println("Regra para pegar a conta e depositar"); // ainda será escrita
     }
 }
