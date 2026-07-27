@@ -31,10 +31,12 @@ public class MenuPrincipal {
                 case 1:
                     conta = new AdicionarConta();
                     conta.executar(banco, entrada);
+                    menu.menu();
                     break;
                 case 2:
                     ListarConta listarConta = new ListarConta();
                     listarConta.executar(banco);
+                    menu.menu();
                     break;
                 case 3:
                     BuscarConta buscarConta = new BuscarConta();
@@ -45,17 +47,21 @@ public class MenuPrincipal {
                     } else {
                         acessarConta(contaBancaria);
                     }
+                    menu.menu();
                     break;
                 case 4:
                     RemoverConta removerConta = new RemoverConta();
                     removerConta.executar(banco, entrada);
+                    menu.menu();
                     break;
+
                 case 0:
                     System.out.println("Encerrando sistema");
                     mostrarMenu = false;
                     break;
                 default:
                     System.out.println("Opção inválida");
+                    menu.menu();
             }
         }
     }
@@ -82,7 +88,7 @@ public class MenuPrincipal {
                     break;
                 case 3:
                     VerSaldo verSaldo = new VerSaldo();
-                    verSaldo.executar(contaBancaria, entrada);
+                    verSaldo.executar(contaBancaria);
                     break;
 
                 case 0:
