@@ -2,10 +2,7 @@ package projetos.sistemabancario.src;
 
 import projetos.sistemabancario.src.banco.Banco;
 import projetos.sistemabancario.src.model.ContaBancaria;
-import projetos.sistemabancario.src.operacoes.AdicionarConta;
-import projetos.sistemabancario.src.operacoes.BuscarConta;
-import projetos.sistemabancario.src.operacoes.ListarConta;
-import projetos.sistemabancario.src.operacoes.RemoverConta;
+import projetos.sistemabancario.src.operacoes.*;
 import projetos.sistemabancario.src.util.Entrada;
 import projetos.sistemabancario.src.util.Menu;
 
@@ -20,18 +17,19 @@ public class MenuPrincipal {
         this.menu = menu;
     }
 
-    public void iniciar(){
+    public void iniciar() {
         boolean mostrarMenu = true;
         menu.menu();
 
-        while (mostrarMenu) {
 
+        while (mostrarMenu) {
+            AdicionarConta conta;
             System.out.print("Digite a opção desejada: ");
             int opcao = entrada.lerInteiro();
 
             switch (opcao) {
                 case 1:
-                    AdicionarConta conta = new AdicionarConta();
+                    conta = new AdicionarConta();
                     conta.executar(banco, entrada);
                     break;
                 case 2:
@@ -42,11 +40,10 @@ public class MenuPrincipal {
                     BuscarConta buscarConta = new BuscarConta();
                     ContaBancaria contaBancaria = buscarConta.executar(banco, entrada);
 
-                    if (contaBancaria == null){
+                    if (contaBancaria == null) {
                         System.out.println("Conta não existe ");
-                    }else {
-                        System.out.println("Conta encontrada");
-                        System.out.println("Titular: " + contaBancaria.getTitular());
+                    } else {
+                      acessarConta(contaBancaria);
                     }
                     break;
                 case 4:
@@ -57,6 +54,43 @@ public class MenuPrincipal {
                     System.out.println("Encerrando sistema");
                     mostrarMenu = false;
                     break;
+                default:
+                    System.out.println("Opção inválida");
+            }
+        }
+    }
+
+    private void acessarConta(ContaBancaria contaBancaria){
+        boolean dentroDaConta = true;
+
+        while (dentroDaConta){
+            menu.subMenu();
+            System.out.print("Digite a opção desejada: ");
+            int opcao = entrada.lerInteiro();
+
+            switch (opcao){
+                case 1:
+                    System.out.println("Depósito");
+                    Depositar depositar = new Depositar();
+                    depositar.executar(contaBancaria, entrada);
+                    break;
+
+                case 2:
+                    System.out.println("Saque");
+                    Sacar sacar = new Sacar();
+                    sacar.executar(contaBancaria, entrada);
+                    break;
+                case 3:
+                    VerSaldo verSaldo = new VerSaldo();
+                    verSaldo.executar(contaBancaria, entrada);
+                    break;
+
+                case 0:
+                    System.out.println("Voltando ao menu principal");
+                    menu.menu();
+                    dentroDaConta = false;
+                    break;
+
                 default:
                     System.out.println("Opção inválida");
             }
