@@ -14,7 +14,6 @@ Documentar, de forma transparente, minha evolução como desenvolvedor — do ze
 - **Aprendizado por projetos**: os conceitos são consolidados através de projetos práticos de complexidade crescente, não apenas exercícios isolados.
 - **Evolução contínua e documentada**: o repositório é atualizado constantemente conforme novos tópicos são estudados, incluindo retrabalho de código antigo à luz de conceitos aprendidos depois.
 
-
 ## 🗂️ Estrutura do repositório
 
 O projeto segue a estrutura padrão de um projeto Java (Maven/IntelliJ), com o código-fonte organizado dentro de `src/`, por tópico/módulo de estudo, refletindo a ordem cronológica de aprendizado:
@@ -25,9 +24,16 @@ AprendendoJava/
     ├── variaveis/            # Sintaxe, tipos primitivos, operadores
     ├── condicional/          # Estruturas de decisão (if/else, switch)
     ├── lacoderepeticao/      # Laços de repetição (while, for) e arrays
-    ├── orientacaoObjetos/   # Orientação a Objetos (classes, objetos, encapsulamento...)
-    │   └── exercicios/       # Exercícios práticos do módulo (ex: Pessoa, Main)
-    └── projetos/             # Projetos práticos completos (ex: Calculadora)
+    ├── orientacaoObjetos/    # Orientação a Objetos (classes, herança, exceptions, collections...)
+    │   └── exercicios/       # Exercícios práticos do módulo
+    └── projetos/
+        ├── calculadora/      # Calculadora com menu repetível (Scanner, switch, while)
+        └── sistemabancario/  # Sistema de contas com arquitetura em camadas
+            ├── model/        # Entidades do domínio (ContaBancaria)
+            ├── banco/        # Regras e coleção de contas
+            ├── operacoes/    # Ações do menu (adicionar, listar, buscar, remover, depositar, sacar)
+            ├── exceptions/   # Exceções customizadas (SaldoInsuficienteException)
+            └── util/         # Utilitários (leitura de entrada, menus)
 ```
 
 *(estrutura em expansão — novas pastas são adicionadas conforme o estudo avança, incluindo os módulos futuros de estrutura de dados, banco de dados e APIs REST)*
@@ -42,9 +48,9 @@ AprendendoJava/
 
 ✅ Lógica matemática aplicada à programação (complexidade, sistemas numéricos)
 
-🔶 Orientação a Objetos — classes, herança, polimorfismo, interfaces e classes abstratas concluídos; falta o projeto prático (Sistema Bancário)
+✅ Orientação a Objetos — classes, herança, polimorfismo, interfaces, classes abstratas e projeto prático (Sistema Bancário) concluídos
 
-🔶 Tratamento de exceções e Collections — try/catch/finally, ArrayList e HashMap concluídos; exercícios complementares em andamento
+✅ Tratamento de exceções e Collections — try/catch/finally, exceções customizadas, ArrayList e HashMap aplicados em projeto real
 
 ⬜ Estrutura de dados e algoritmos
 
