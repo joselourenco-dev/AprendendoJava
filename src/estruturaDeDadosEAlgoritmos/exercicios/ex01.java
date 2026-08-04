@@ -36,24 +36,32 @@ public class ex01 {
         System.out.println("=================== \n");
 
         // 3
-        String parenteses = "()))";
-
+        String parenteses = "())((()))";
         Deque<String> novaPilha = new ArrayDeque<>();
+        boolean balanceado = true;
 
         for (int i = 0; i < parenteses.length(); i++) {
-            if (parenteses.charAt(i) == '(') {
-                novaPilha.push("S");
-            } else if (novaPilha.isEmpty()) {
-                System.out.println("Pilha vazia - Desbalanceada");
+            char c = parenteses.charAt(i);
+
+            if (c == '(') {
+                novaPilha.push("(");
             } else {
+                if (novaPilha.isEmpty()) {
+                    balanceado = false;
+                    break;
+                }
                 novaPilha.pop();
             }
         }
-        if (!novaPilha.isEmpty()) {
-            System.out.println("Pilha ainda contem itens - desbalanceada");
+
+        if (balanceado && novaPilha.isEmpty()) {
+            System.out.println("Balanceada");
+        } else {
+            System.out.println("Desbalanceada");
         }
 
-
     }
+
+
 
 }
