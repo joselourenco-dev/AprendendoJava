@@ -1,6 +1,6 @@
 package estruturaDeDadosEAlgoritmos;
 
-public class Aula03 {
+public class No {
     public static void main(String[] args){
         No ana = new No("Ana");
         No bruno = new No("Bruno");
