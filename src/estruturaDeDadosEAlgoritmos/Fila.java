@@ -3,7 +3,7 @@ package estruturaDeDadosEAlgoritmos;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Aula02 {
+public class Fila {
     public static void main(String[] args){
         Deque<String> fila = new ArrayDeque<>();
         fila.offer("Cliente 1");

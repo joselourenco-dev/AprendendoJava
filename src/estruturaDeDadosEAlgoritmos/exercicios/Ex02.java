@@ -46,10 +46,5 @@ public class Ex02 {
             String clienteAtual = filaDeEspera.pollFirst();
             clienteAtendidos.offer(clienteAtual);
         }
-
-        //04
-        //pesquisa feita.
-
-
     }
 }

@@ -3,7 +3,7 @@ package estruturaDeDadosEAlgoritmos;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Aula01 {
+public class Pilha {
     public static void main(String[] args){
         Deque<String> pilha = new ArrayDeque<>();
 

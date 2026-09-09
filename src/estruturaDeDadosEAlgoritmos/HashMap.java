@@ -1,6 +1,6 @@
 package estruturaDeDadosEAlgoritmos;
 
-public class Aula04 {
+public class HashMap {
     public static void main(String[] args){
         String[] chaves = {"Alan", "Bruno", "Carla"};
 
