@@ -3,7 +3,7 @@ package estruturaDeDadosEAlgoritmos;
 public class ArvoreBinaria {
     NoArvore raiz;
 
-    void inserir(int valor) {
+    public void inserir(int valor) {
         raiz = inserirRecursivo(raiz, valor);
     }
 
@@ -19,5 +19,25 @@ public class ArvoreBinaria {
         }
 
         return atual;
+    }
+
+    public NoArvore buscar(int valor) {
+        NoArvore atual = raiz;
+        while (atual != null) {
+            if (valor == atual.valor) {
+                return atual; // Valor encontrado
+            }
+            if (valor < atual.valor) {
+                atual = atual.esquerda; // Vai para a esquerda
+            } else {
+                atual = atual.direita; // Vai para a direita
+            }
+        }
+        return null; // Não encontrado
+    }
+
+    public void imprimirBusca(int valor){
+        NoArvore resultado = buscar(valor);
+        System.out.println(resultado.valor);
     }
 }
